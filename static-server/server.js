@@ -22,10 +22,8 @@ var server = http.createServer(function (request, response) {
   console.log("请求路径为：" + pathWithQuery);
 
   response.statusCode = 200;
-  // 默认首页
   const filePath = path === "/" ? "/index.html" : path;
   const index = filePath.lastIndexOf(".");
-  // suffix 是后缀
   const suffix = filePath.substring(index);
   const fileTypes = {
     ".html": "text/html",
